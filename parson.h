@@ -41,12 +41,13 @@ typedef struct json_value_t  JSON_Value;
  * @enum JSON_Value_Type
  * @brief specifies the types of JSON values
  * @see json_value_t
+ * @see JSON_Value_Value
  */
 typedef enum json_value_type {
     JSONError   = 0,  /**< an error occured */
     JSONNull    = 1,  /**< value is NULL */
     JSONString  = 2,  /**< value is of type string (char*) */
-    JSONNumber  = 3,  /**< value is a number (integer or float) */
+    JSONNumber  = 3,  /**< value is a number (double) */
     JSONObject  = 4,  /**< value is a JSON object */
     JSONArray   = 5,  /**< value is an array */
     JSONBoolean = 6   /**< value is boolean */

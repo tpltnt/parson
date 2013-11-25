@@ -44,13 +44,18 @@
 #define parson_realloc(a, b) realloc(a, b)
 
 /* Type definitions */
+/**
+ * @union JSON_Value_Value
+ * Store the actual data values associated with a JSON value.
+ * @see JSON_Value_Type
+ */
 typedef union json_value_value {
-    const char  *string;
-    double       number;
-    JSON_Object *object;
-    JSON_Array  *array;
-    int          boolean;
-    int          null;
+    const char  *string;   /**< JSON string */
+    double       number;   /**< JSON number */
+    JSON_Object *object;   /**< JSON object */
+    JSON_Array  *array;    /**< JSON array */
+    int          boolean;  /**< JSON boolean */
+    int          null;     /**< JSON Null */
 } JSON_Value_Value;
 
 /**
