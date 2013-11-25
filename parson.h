@@ -47,7 +47,12 @@ typedef enum json_value_type {
     JSONBoolean = 6
 } JSON_Value_Type;
 
-/* Parses first JSON value in a file, returns NULL in case of error */
+/**
+ * Parses first JSON value in a file.
+ * @param filename of file to be opened and parsed
+ * @returns JSON_Value in case of success, NULL in case of error 
+ * @see json_parse_string(const char *string)
+ */
 JSON_Value  * json_parse_file(const char *filename);
 
 /**
