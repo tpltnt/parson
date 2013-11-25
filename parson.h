@@ -30,7 +30,8 @@ extern "C"
 #endif    
     
 #include <stddef.h>   /* size_t */    
-    
+
+/** @file */    
 /* Types and enums */
 typedef struct json_object_t JSON_Object;
 typedef struct json_array_t  JSON_Array;
@@ -49,7 +50,12 @@ typedef enum json_value_type {
 /* Parses first JSON value in a file, returns NULL in case of error */
 JSON_Value  * json_parse_file(const char *filename);
 
-/*  Parses first JSON value in a string, returns NULL in case of error */
+/**
+ * Parse first JSON value in given string.
+ * @param string to be parsed
+ * @returns JSON_Value in case of success, NULL in case of error
+ * @see json_parse_file(const char *filename)
+ */
 JSON_Value  * json_parse_string(const char *string);
 
 /* JSON Object */
