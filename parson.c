@@ -56,16 +56,28 @@ typedef union json_value_value {
 /**
  * @struct json_value_t
  * @var json_value_t::type
- * The member 'type' describes the type of JSON data
+ * The member 'type' describes the type of JSON data.
  * @see json_value_type
  * @var json_value_t::value
- * The member 'value' describes the value of JSON data
+ * The member 'value' describes the value of JSON data.
  */
 struct json_value_t {
     JSON_Value_Type     type;
     JSON_Value_Value    value;
 };
 
+/**
+ * @struct json_object_t
+ * @var json_object_t::names
+ * The member 'names' points to the names of JSON values in the current JSON object.
+ * @var json_object_t::values
+ * The member 'values' points to the JSON values in the current JSON object.
+ * @see json_value_t
+ * @var json_object_t::count
+ * The member 'count' indicates the current number of JSON values stored in the current JSON object.
+ * @var json_object_t::capacity
+ * The member 'capacity' indicates the maximum number of JSON values to be stored in the current JSON object.
+ */
 struct json_object_t {
     const char **names;
     JSON_Value **values;
