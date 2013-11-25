@@ -40,6 +40,7 @@ typedef struct json_value_t  JSON_Value;
 /**
  * @enum JSON_Value_Type
  * @brief specifies the types of JSON values
+ * @see json_value_t
  */
 typedef enum json_value_type {
     JSONError   = 0,  /**< an error occured */

@@ -53,6 +53,14 @@ typedef union json_value_value {
     int          null;
 } JSON_Value_Value;
 
+/**
+ * @struct json_value_t
+ * @var json_value_t::type
+ * The member 'type' describes the type of JSON data
+ * @see json_value_type
+ * @var json_value_t::value
+ * The member 'value' describes the value of JSON data
+ */
 struct json_value_t {
     JSON_Value_Type     type;
     JSON_Value_Value    value;
